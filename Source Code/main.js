@@ -6,7 +6,6 @@ List of Modifications Added
 Implement sound when menu button is pressed: 5
 Added copyright-free music: 10
 Randomize ship movements on each play: 10
-Track high score that persists across scenes: 10
 Create a new scrolling tile sprite for the background: 10
 Make menu buttons highlight when hovered over: 10
 Parallax scrolling: 15
@@ -17,7 +16,7 @@ Created new animated sprite for Spaceship enemies: 15
 Create new artwork for all of the in-game assets (rocket, spaceships, explosion): 25
 Create and implement a new weapon: 25
 
-Total Points: 180
+Total Points: 170
 */
 
 //Game Window Config Settings
