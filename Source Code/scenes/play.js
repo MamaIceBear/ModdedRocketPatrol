@@ -19,6 +19,7 @@ class Play extends Phaser.Scene
         this.load.audio("explosion2", "./Assets/Sound/explosion2.mp3");
         this.load.audio("explosion3", "./Assets/Sound/explosion3.mp3");
         this.load.audio("explosion4", "./Assets/Sound/explosion3.mp3");
+        this.load.audio("engine", "./Assets/Sound/jetfuel.mp3");
     }
 
     create()
@@ -57,19 +58,23 @@ class Play extends Phaser.Scene
         //Main Menu Space Music
         let audioPlayer = this.sound.add("space", soundConfig);
         audioPlayer.play();
+        soundConfig.volume = 0.5;
+        let fuel = this.sound.add("engine", soundConfig);
+        fuel.play();
+        soundConfig.volume = 1;
 
         //Added Ships
-        this.ship01 = new Spaceship(this, game.config.width/2 + Phaser.Math.Between(0, 300), 100, "alien", 0, 30, 2 + game.settings.spaceshipSpeed, 
+        this.ship01 = new Spaceship(this, game.config.width/2 + Phaser.Math.Between(0, 300), 100, "alien", 0, 60, 2 + game.settings.spaceshipSpeed, 
         "right").setOrigin(0, 0).setDepth(1);
-        this.ship02 = new Spaceship(this, Phaser.Math.Between(0, 300), 200, "alien", 0, 20, 2 + game.settings.spaceshipSpeed, 
+        this.ship02 = new Spaceship(this, Phaser.Math.Between(0, 300), 200, "alien", 0, 50, 2 + game.settings.spaceshipSpeed, 
         "left").setOrigin(0, 0).setDepth(1);
-        this.ship03 = new Spaceship(this, game.config.width/2 + Phaser.Math.Between(0, 300), 300, "alien", 0, 10, 2 + game.settings.spaceshipSpeed, 
+        this.ship03 = new Spaceship(this, game.config.width/2 + Phaser.Math.Between(0, 300), 300, "alien", 0, 40, 2 + game.settings.spaceshipSpeed, 
         "right").setOrigin(0, 0).setDepth(1);
-        this.ship04 = new Spaceship(this, Phaser.Math.Between(0, 300), 400, "alien", 0, 20, 2 + game.settings.spaceshipSpeed, 
+        this.ship04 = new Spaceship(this, Phaser.Math.Between(0, 300), 400, "alien", 0, 30, 2 + game.settings.spaceshipSpeed, 
         "left").setOrigin(0, 0).setDepth(1);
-        this.ship05 = new Spaceship(this, game.config.width/2 + Phaser.Math.Between(0, 300), 500, "alien", 0, 10, 2 + game.settings.spaceshipSpeed, 
+        this.ship05 = new Spaceship(this, game.config.width/2 + Phaser.Math.Between(0, 300), 500, "alien", 0, 20, 2 + game.settings.spaceshipSpeed, 
         "right").setOrigin(0, 0).setDepth(1);
-        this.ship06 = new Spaceship(this, Phaser.Math.Between(0, 300), 600, "alien", 0, 20, 2 + game.settings.spaceshipSpeed, 
+        this.ship06 = new Spaceship(this, Phaser.Math.Between(0, 300), 600, "alien", 0, 10, 2 + game.settings.spaceshipSpeed, 
         "left").setOrigin(0, 0).setDepth(1);
 
         this.ship01.play("alienMoving");

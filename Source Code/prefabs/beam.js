@@ -11,7 +11,7 @@ class Beam extends Phaser.GameObjects.Sprite{
     {
         if(this.y < gameConfig.height)
         {
-            this.y -= 2;
+            this.y -= 10;
         }
         //If the rocket reaches a certain pixel height
         if(this.y >= gameConfig.height)

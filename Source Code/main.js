@@ -2,18 +2,22 @@
 Rocket Patrol Modified by Sam Nguyen
 
 List of Modifications Added
-Create new title screen: 15
-Added copyright-free music: 10
-Parallax scrolling: 15
-Create a new scrolling tile sprite for the background: 10
-Make menu buttons highlight when hovered over: 5
-Implement sound when menu button is pressed: 5
-Create new artwork for all of the in-game assets (rocket, spaceships, explosion): 25
-Created new animated sprite for Spaceship enemies: 15
-High score that persists across scenes: 10
-Can fire multiple times while moving: 10
 
-Total Points: 120
+Implement sound when menu button is pressed: 5
+Added copyright-free music: 10
+Randomize ship movements on each play: 10
+Track high score that persists across scenes: 10
+Create a new scrolling tile sprite for the background: 10
+Make menu buttons highlight when hovered over: 10
+Parallax scrolling: 15
+4 new explosion fx and are randomized: 15
+Display time remaining in seconds on screen: 15
+Create new title screen: 15
+Created new animated sprite for Spaceship enemies: 15
+Create new artwork for all of the in-game assets (rocket, spaceships, explosion): 25
+Create and implement a new weapon: 25
+
+Total Points: 180
 */
 
 //Game Window Config Settings
@@ -28,10 +32,7 @@ let gameConfig =
         autoCenter: Phaser.Scale.CENTER_BOTH,
     },
     scene: [Menu, Play, Controls, Options, Credits, GameOver],
-    render: //Removes sharpening 
-    {
-        pixelArt: true
-    },
+    pixelArt: true,
     physics: 
     {
         default: "arcade",
