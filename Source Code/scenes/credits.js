@@ -12,6 +12,7 @@ class Credits extends Phaser.Scene
     }
     create()
     {
+        menuConfig.fontSize = "50px";
         menuConfig.color = "#00FF00";
         this.add.text(gameConfig.width/2, 50, "Sprites and Programming by", menuConfig).setOrigin(0.5);
         menuConfig.color = "#0000FF";

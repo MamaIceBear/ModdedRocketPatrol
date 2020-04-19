@@ -90,14 +90,14 @@ class Play extends Phaser.Scene
         keyRIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
 
         menuConfig.color = "#FFFFFF";
-        menuConfig.fontSize = "36px";
+        menuConfig.fontSize = "50px";
         
         //Player Score
         this.scoreLeft = this.add.text(32, 32, "Score:" + p1Score, menuConfig).setDepth(2);
         this.projectile;
         //Timer
         this.initTime = game.settings.gameTimer / 1000;
-        this.timer = this.add.text(gameConfig.width - 350, 32, "Time: " + this.clock(this.initTime), menuConfig).setDepth(2);
+        this.timer = this.add.text(gameConfig.width - 200, 32, "Time: " + this.clock(this.initTime), menuConfig).setDepth(2);
         this.timedEvent = this.time.addEvent(
         {
             delay: 1000, 
@@ -110,6 +110,7 @@ class Play extends Phaser.Scene
         this.time.delayedCall(game.settings.gameTimer, ()=> 
         {
             audioPlayer.stop();
+            fuel.stop();
             this.gameOver = true;
         });
 

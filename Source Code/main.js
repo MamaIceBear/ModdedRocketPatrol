@@ -47,8 +47,8 @@ let gameConfig =
 //Menu Config Settings
 let menuConfig = 
 {
-    fontFamily: "Arcade",
-    fontSize: "50px",
+    fontFamily: "Brushstroke, fantasy",
+    fontSize: "100px",
     backgroundColor: null,
     color: "#EEB80F",
     align: "right",
@@ -78,5 +78,5 @@ let game = new Phaser.Game(gameConfig);
 game.settings = 
 {
     spaceshipSpeed: 0,
-    gameTimer: 60000
+    gameTimer: 5000
 }

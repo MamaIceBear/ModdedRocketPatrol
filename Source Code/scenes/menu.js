@@ -20,6 +20,7 @@ class Menu extends Phaser.Scene
 
     create()
     {
+
         //Sprite Animations
         let rocket = this.add.sprite(gameConfig.width/2 + 16, gameConfig.height/2 - 46, "rocket", 0).setDepth(1);
         rocket.alpha = 0;
@@ -39,7 +40,7 @@ class Menu extends Phaser.Scene
             frames: this.anims.generateFrameNames("rocket", {start: 3, end: 4})
         });
         menuConfig.color = "#EEB80F";
-        menuConfig.fontSize = "50px";
+        menuConfig.fontSize = "100px";
         //Show the text menu
         let centerX = game.config.width/2;
         let centerY = game.config.height/2;

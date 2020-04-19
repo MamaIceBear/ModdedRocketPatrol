@@ -13,7 +13,7 @@ class Controls extends Phaser.Scene
     create()
     {
         menuConfig.color = "#FF00FF";
-        menuConfig.fontSize = "36px";
+        menuConfig.fontSize = "72px";
         this.add.text(gameConfig.width/2, 200, "Arrows keys <- and -> for movement", menuConfig).setOrigin(0.5);
         this.add.text(gameConfig.width/2, 300, "F to use blaster", menuConfig).setOrigin(0.5);
         this.add.text(gameConfig.width/2, 400, "Be sure to position yourself to hit your targets", menuConfig).setOrigin(0.5);

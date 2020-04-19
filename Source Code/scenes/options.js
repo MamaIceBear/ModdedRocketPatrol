@@ -17,7 +17,7 @@ class Options extends Phaser.Scene
     create()
     {
         menuConfig.color = "#21A9D5";
-        menuConfig.fontSize = "36px";
+        menuConfig.fontSize = "72px";
         this.add.text(gameConfig.width/2, 250, "Choose your difficulty", menuConfig).setOrigin(0.5);
 
         //Sound Effects

@@ -14,9 +14,9 @@ class GameOver extends Phaser.Scene
         this.klink = this.sound.add("klink");
 
         menuConfig.color = "#EE2400";
-        menuConfig.fontSize = "50px";
+        menuConfig.fontSize = "100px";
         this.add.text(gameConfig.width/2, 300, "Game Over?", menuConfig).setOrigin(0.5);
-        menuConfig.fontSize = "36px";
+        menuConfig.fontSize = "72px";
         this.add.text(gameConfig.width/2, 400, "Final Score:" + p1Score, menuConfig).setOrigin(0.5);
         this.add.text(gameConfig.width/2, 500, "Press R to restart or ENTER to go to main menu", menuConfig).setOrigin(0.5);
 
